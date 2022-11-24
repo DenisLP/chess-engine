@@ -16,13 +16,12 @@ class Main
 
   # while game_status == "running"
 
-    input = gets
-    input = input.chomp
-    puts "Selected Piece: #{input}"
+    piece = false
     while piece == false
-      piece = play.select_piece input, board
+      piece = play.select_piece board
     end
-    # puts "Valid Piece: #{piece.icon}"
+
+    puts "Move #{piece.icon} to: " unless piece == "quit"
     # position = Position.new
     # while play.is_valid_move?
     #   position = play.select_move input

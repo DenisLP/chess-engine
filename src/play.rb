@@ -25,16 +25,26 @@ def next_player
 end
 
 
-def select_piece id, board
+def select_piece board
+
+  puts "K ♔, Q ♕, R1 R2 ♖, N1 N2 ♘, B1 B2 ♗, P1..P8 ♙"
+  print "Selected a piece: (q) quit: "
+  input = gets
+  input = input.chomp
+  # puts "Selected Piece: #{input}"
+
+  return "quit" if input == "q"
+
+  input = "w"+input.captalize if @turn == Piece::WHITE
+  input = "b"+input.captalize if @turn == Piece::BLACK
+
   board.board.each do |row|
     row.each do |piece|
-
-        return piece if piece.id == id unless piece.class == String
-
+        return piece if piece.id == input unless piece.class == String
     end
 
   end
-  puts "Invalid selection. Try again:"
+  puts " Invalid selection."
   return false
 end
 
