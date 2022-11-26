@@ -4,8 +4,8 @@ class Piece < Position
 
   attr_accessor :id, :name, :color, :status, :icon, :position
 
-  WHITE = "White"
-  BLACK = "Black"
+  WHITE = "WHITE"
+  BLACK = "BLACK"
 
   PAWN = "Pawn"
   ROOK = "Rook"
@@ -25,14 +25,13 @@ class Piece < Position
   DEAD = "Dead"
 
 
-  def initialize(id, name, color, icon, status, row, column)
+  def initialize(id, name, color, icon, status, position)
     @id = id
     @name = name
     @color = color
     @icon = icon
     @status = status
-    @position = Position.new(row, column)
-
+    @position = position
   end
 
   def print_icon

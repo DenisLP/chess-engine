@@ -1,9 +1,9 @@
 class Position
-  attr :row
-  attr :column
+
+  attr_accessor :row, :column
 
   def initialize row, column
-    @row = row
-    @column = column
+    @row = row.to_i
+    @column = column.to_i
   end
 end

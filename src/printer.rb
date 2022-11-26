@@ -1,6 +1,6 @@
 class Printer
 
-  def print_board board
+  def print_board board, info_message, input_message
     # puts "Size: "+board.size.to_s
     # puts "#{board[0][0].to_s}  #{board[0][1].to_s}  #{board[0][2].to_s}  #{board[0][3].to_s}  #{board[0][4].to_s}  #{board[0][5].to_s}  #{board[0][6].to_s}  #{board[0][7].to_s}"
     # puts "#{board[1][0].to_s}  #{board[1][1].to_s}  #{board[1][2].to_s}  #{board[1][3].to_s}  #{board[1][4].to_s}  #{board[1][5].to_s}  #{board[1][6].to_s}  #{board[1][7].to_s}"
@@ -10,7 +10,11 @@ class Printer
     # puts "#{board[5][0].to_s}  #{board[5][1].to_s}  #{board[5][2].to_s}  #{board[5][3].to_s}  #{board[5][4].to_s}  #{board[5][5].to_s}  #{board[5][6].to_s}  #{board[5][7].to_s}"
     # puts "#{board[6][0].to_s}  #{board[6][1].to_s}  #{board[6][2].to_s}  #{board[6][3].to_s}  #{board[6][4].to_s}  #{board[6][5].to_s}  #{board[6][6].to_s}  #{board[6][7].to_s}"
     # puts "#{board[7][0].to_s}  #{board[7][1].to_s}  #{board[7][2].to_s}  #{board[7][3].to_s}  #{board[7][4].to_s}  #{board[7][5].to_s}  #{board[7][6].to_s}  #{board[7][7].to_s}"
+    system('clear')
+    puts info_message
+    puts "\nK ♔, Q ♕, R1 R2 ♖, N1 N2 ♘, B1 B2 ♗, P1..P8 ♙\n\n"
     print_line board
+    print input_message
 
   end
 
@@ -32,12 +36,12 @@ class Printer
         print_square(row, column, board)
 
       end
-      puts #just create a new line
+      puts
     end
 
     puts "  - - - - - - - -"
     puts "  0 1 2 3 4 5 6 7"
-    puts "  A B C D E F G H"
+    # puts "  A B C D E F G H"
 
   end
 
