@@ -1,4 +1,5 @@
 #Chess Game - Study Case
 
-GitHub: DenisLP
+This project was created just to practice **Ruby** code.
 
+GitHub: DenisLP
