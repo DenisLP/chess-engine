@@ -37,7 +37,6 @@ class Main
 
 
   end
-
   puts "End of the game"
 
 end
